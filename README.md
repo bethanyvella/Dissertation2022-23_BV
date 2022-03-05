@@ -30,3 +30,6 @@ req = urllib.request.Request(
 f = urllib.request.urlopen(req)
 print(f.read().decode('utf-8'))
 ```
+
+## urllib.error link documentation
+https://docs.python.org/3/library/urllib.error.html
