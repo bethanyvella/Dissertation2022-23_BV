@@ -33,3 +33,6 @@ print(f.read().decode('utf-8'))
 
 ## urllib.error link documentation
 https://docs.python.org/3/library/urllib.error.html
+
+## tool for vulnerability scanner - thanks sir :D
+https://portswigger.net/burp/vulnerability-scanner/javascript-vulnerability-scanner
