@@ -15,6 +15,10 @@ response = requests.get(url)
 soup =  BeautifulSoup(response.text, 'html.parser')
 print(soup.title)
 print(soup)
+scripts = soup.select('script')
+for s in scripts:
+    print(s)
+
 
 """
 
@@ -52,6 +56,7 @@ for count, url in enumerate(csv_reader):
         response = urllib.request.urlopen(req)
         
         print(new_url , response.info().get('Server'))
+        
     except urllib.error.HTTPError as e:
         print(new_url , e.headers.get('Server'))
     except urllib.error.URLError as e:
