@@ -14,7 +14,7 @@ from urllib3.exceptions import NewConnectionError
 import hashlib
 
 
-read_obj = open('tranco_QYW4.csv', 'r') 
+read_obj = open('robert.csv', 'r') 
 csv_reader =  reader(read_obj)
 
 logging.basicConfig(filename="logfile.log",
@@ -24,7 +24,7 @@ logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
 
 parent_dir = "C:\\Users\\betha\\Desktop\\ITProject\\WebScrapingProject\\"
-directory = "websites\\"
+directory = "websites2\\"
 col1 = "JS Path"
 col2 = "Hash"
 path1 = os.path.join(parent_dir, directory)
@@ -40,7 +40,7 @@ for count, url in enumerate(csv_reader):
         req = requests.get('http://' + new_url, data=None, headers=headers).text
         soup = BeautifulSoup(req, 'html.parser')
         server = soup.select('server')
-        print(new_url, server)
+        #print(new_url, server)
 
         scripts = soup.select('script')
         filenumber = 0
@@ -50,7 +50,7 @@ for count, url in enumerate(csv_reader):
             if s.has_attr('src'):
                 if s['src'].startswith("httyp"):
                     js = requests.get(s['src'])
-                    print(js)
+                    #print(js)
                 else:
                     if s['src'][0] != "/":
                         js = requests.get("http://"+new_url+"/"+s['src'])
@@ -64,7 +64,7 @@ for count, url in enumerate(csv_reader):
                 with open(jsPath, 'rb') as jsScript:
                     file_buffer = jsScript.read()
                     result = hashlib.sha256(file_buffer)
-                    print(result.hexdigest())
+                    #print(result.hexdigest())
                     data = pd.read_excel(r"jQuriesHashes.xlsx")
                     df = pd.DataFrame(data, columns=['Hash', 'Vulnrable'])
                     for index, row in df.iterrows():
@@ -82,7 +82,7 @@ for count, url in enumerate(csv_reader):
                 with open(jsPath, 'rb') as jsScript:
                     file_buffer = jsScript.read()
                     result = hashlib.sha256(file_buffer)
-                    print(result.hexdigest())
+                    #print(result.hexdigest())
                     data = pd.read_excel(r"jQuriesHashes.xlsx")
                     df = pd.DataFrame(data, columns=['Hash','Vulnrable'])
                     for index, row in df.iterrows():
