@@ -25,7 +25,7 @@ logging.basicConfig(filename="logfile.log",
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
 
-parent_dir = "C:\\Users\\betha\Desktop\\ITProject\\WebScrapingProject\\"
+parent_dir = "C:\\Users\\betha\\Desktop\\ITProject-Dissertation\\WebScrapingProject\\"
 directory = "websites2\\"
 col1 = "JS Path"
 col2 = "Hash"
@@ -39,7 +39,7 @@ file.close()
 
 for count, url in enumerate(csv_reader):
     new_url = url[0]
-    if(count == 1000):
+    if(count == 100): 
         break
     
     try:
@@ -54,19 +54,29 @@ for count, url in enumerate(csv_reader):
 
         scripts = soup.select('script')
         filenumber = 0
+        data = pd.read_excel(r"jQuriesHashes.xlsx")
         for s in scripts:
-            
-            #filename = "%s.txt" % scripts
+            #-----------------------------------------------------------------------------------
+            # CDN MATCH     
             if s.has_attr('src'):
                 if s['src'].startswith("http"):
                     js = requests.get(s['src'])
-                    #print(js)
+
+                    df = pd.DataFrame(data, columns=['Cdn', 'Vulnerable'])
+                    for index, row in df.iterrows(): 
+                        if row['Cdn'] == s['src']:
+                            if row['Vulnerable'] == "Yes":
+                                print("--------Vulnerable Library Detected from CDN:  " + new_url + jsPath)
+                                file = open(vulnerabilityReportPath, "a", encoding='utf-8')
+                                file.write("\n--"+new_url+" | "+jsPath)
                 else:
                     if s['src'][0] != "/":
                         js = requests.get("http://"+new_url+"/"+s['src'])
                     else:
                         js = requests.get("http://"+new_url+s['src'])
-                   
+                
+                #--------------------------------------------------------------------------------------
+                #HASH MATCH
                 jsPath = path2 + "\\" + s['src'].replace(':', '_').replace('/', '_').replace('?', '_')
                 file = open(jsPath, "w", encoding='utf-8')
                 file.write(js.text)
@@ -76,14 +86,13 @@ for count, url in enumerate(csv_reader):
                     #when the file is saved, Windows line endings are used (CRLF). When hashing these are changed to LF since the hash would change due to line endings
                     file_buffer = file_buffer.replace(WINDOWS_LINE_ENDINGS, UNIX_LINE_ENDINGS)
                     result = hashlib.sha256(file_buffer)
-                    #print(result.hexdigest())
-                    data = pd.read_excel(r"JQueryHashes.xlsx")
+                    
+                    
                     df = pd.DataFrame(data, columns=['Hash', 'Vulnerable'])
                     for index, row in df.iterrows():
-                        #print(index, row['Hash'])
                         if row['Hash'] == result.hexdigest():
                             if row['Vulnerable'] == "Yes":
-                                print("Vulnerable Library Detected from " + new_url + jsPath)
+                                print("Vulnerable Library Detected from HASH:  " + new_url + jsPath)
                                 file = open(vulnerabilityReportPath, "a", encoding='utf-8')
                                 file.write("\n--"+new_url+" | "+jsPath)
                                 file.close()
@@ -100,13 +109,13 @@ for count, url in enumerate(csv_reader):
                     file_buffer = file_buffer.replace(WINDOWS_LINE_ENDINGS, UNIX_LINE_ENDINGS)
                     result = hashlib.sha256(file_buffer)
                     #print(result.hexdigest())
-                    data = pd.read_excel(r"JQueryHashes.xlsx")
+                    
                     df = pd.DataFrame(data, columns=['Hash','Vulnerable'])
                     for index, row in df.iterrows():
                         #print(index, row['Hash'])
                         if row['Hash'] == result.hexdigest():
                             if row['Vulnerable'] == "Yes":
-                                print("Vulnerable Library Detected from " + new_url + " "+ jsPath)
+                                print("Vulnerable Library Detected from HASH: " + new_url + " "+ jsPath)
                                 file = open(vulnerabilityReportPath, "a", encoding='utf-8')
                                 file.write("\n--"+new_url+" | "+jsPath)
                                 file.close()
