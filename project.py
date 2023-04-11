@@ -12,7 +12,12 @@ import os
 import urllib3
 from urllib3.exceptions import NewConnectionError
 import hashlib
+from difflib import Differ, SequenceMatcher
+import sqlite3
+import os
 
+conn = sqlite3.connect('dissertation_database.db')
+cursor = conn.cursor()
 
 read_obj = open('tranco_QYW4.csv', 'r') 
 csv_reader =  reader(read_obj)
@@ -37,6 +42,8 @@ file = open(vulnerabilityReportPath, "w", encoding='utf-8')
 file.write("--Vulnerability Report--")
 file.close()
 
+
+
 for count, url in enumerate(csv_reader):
     new_url = url[0]
     if(count == 100): 
@@ -54,7 +61,7 @@ for count, url in enumerate(csv_reader):
 
         scripts = soup.select('script')
         filenumber = 0
-        data = pd.read_excel(r"jQuriesHashes.xlsx")
+        sadata = pd.read_excel(r"jQuriesHashes.xlsx")
         for s in scripts:
             #-----------------------------------------------------------------------------------
             # CDN MATCH     
@@ -62,7 +69,7 @@ for count, url in enumerate(csv_reader):
                 if s['src'].startswith("http"):
                     js = requests.get(s['src'])
 
-                    df = pd.DataFrame(data, columns=['Cdn', 'Vulnerable'])
+                    df = pd.DataFrame(sadata, columns=['Cdn', 'Vulnerable'])
                     for index, row in df.iterrows(): 
                         if row['Cdn'] == s['src']:
                             if row['Vulnerable'] == "Yes":
@@ -88,7 +95,7 @@ for count, url in enumerate(csv_reader):
                     result = hashlib.sha256(file_buffer)
                     
                     
-                    df = pd.DataFrame(data, columns=['Hash', 'Vulnerable'])
+                    df = pd.DataFrame(sadata, columns=['Hash', 'Vulnerable'])
                     for index, row in df.iterrows():
                         if row['Hash'] == result.hexdigest():
                             if row['Vulnerable'] == "Yes":
