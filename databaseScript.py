@@ -44,10 +44,15 @@ try:
 	#inserting values
 	#insert in table 1 
 	conn.execute('INSERT INTO library (libraryName) VALUES ("jQuery")')
+	conn.execute('INSERT INTO library (libraryName) VALUES ("jQuery-Migrate")')
+	conn.execute('INSERT INTO library (libraryName) VALUES ("underscore.js")')
 	for row in (conn.execute("SELECT * FROM library")):
 		print(row)
 
 	#insert data in table 2
+	
+	# insert jquery data
+
 	conn.execute("INSERT INTO version (versionName, isVulnerable, libraryID) VALUES ('3.6.0', 0 , 1)"),
 	conn.execute("INSERT INTO version (versionName, isVulnerable, libraryID) VALUES ('3.5.1', 0 , 1)"),
 	conn.execute("INSERT INTO version (versionName, isVulnerable, libraryID) VALUES ('3.5.0', 1 , 1)"),
@@ -127,12 +132,111 @@ try:
 	conn.execute("INSERT INTO version (versionName, isVulnerable, libraryID) VALUES ('1.0.3', 1 , 1)"), 
 	conn.execute("INSERT INTO version (versionName, isVulnerable, libraryID) VALUES ('1.0.2', 1 , 1)"),
 	conn.execute("INSERT INTO version (versionName, isVulnerable, libraryID) VALUES ('1.0.1', 1 , 1)"), 
-	conn.execute("INSERT INTO version (versionName, isVulnerable, libraryID) VALUES ('1.0.0', 1 , 1)")
+	conn.execute("INSERT INTO version (versionName, isVulnerable, libraryID) VALUES ('1.0.0', 1 , 1)"),
 
-	for row1 in (conn.execute("SELECT * FROM version")):
-		print(row1)
+	#entering data for library 2 - jquery-migrare
+	conn.execute("INSERT INTO version (versionName, isVulnerable, libraryID) VALUES ('3.4.1', 0 , 2)"),	
+	conn.execute("INSERT INTO version (versionName, isVulnerable, libraryID) VALUES ('3.4.0', 0 , 2)"),	
+	conn.execute("INSERT INTO version (versionName, isVulnerable, libraryID) VALUES ('3.3.2', 0 , 2)"),	
+	conn.execute("INSERT INTO version (versionName, isVulnerable, libraryID) VALUES ('3.3.1', 0 , 2)"),	
+	conn.execute("INSERT INTO version (versionName, isVulnerable, libraryID) VALUES ('3.3.0', 0 , 2)"),	
+	conn.execute("INSERT INTO version (versionName, isVulnerable, libraryID) VALUES ('3.2.0', 0 , 2)"),	
+	conn.execute("INSERT INTO version (versionName, isVulnerable, libraryID) VALUES ('3.1.0', 0 , 2)"),	
+	conn.execute("INSERT INTO version (versionName, isVulnerable, libraryID) VALUES ('3.0.1', 0 , 2)"),	
+	conn.execute("INSERT INTO version (versionName, isVulnerable, libraryID) VALUES ('3.0.0', 0 , 2)"),	
+
+	conn.execute("INSERT INTO version (versionName, isVulnerable, libraryID) VALUES ('1.4.1', 0 , 2)"),	
+	conn.execute("INSERT INTO version (versionName, isVulnerable, libraryID) VALUES ('1.4.0', 0 , 2)"),	
+	conn.execute("INSERT INTO version (versionName, isVulnerable, libraryID) VALUES ('1.3.0', 0 , 2)"),	
+	conn.execute("INSERT INTO version (versionName, isVulnerable, libraryID) VALUES ('1.2.0', 1 , 2)"),	
+	conn.execute("INSERT INTO version (versionName, isVulnerable, libraryID) VALUES ('1.1.1', 1 , 2)"),	
+	conn.execute("INSERT INTO version (versionName, isVulnerable, libraryID) VALUES ('1.1.0', 1 , 2)"),	
+	conn.execute("INSERT INTO version (versionName, isVulnerable, libraryID) VALUES ('1.0.0', 1 , 2)"),
+	
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('0.1.0',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('0.2.0',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('0.3.0',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('0.3.1',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('0.3.2',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('0.3.3',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('0.4.0',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('0.4.1',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('0.4.2',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('0.4.3',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('0.4.4',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('0.4.5',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('0.4.6',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('0.4.7',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('0.5.0',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('0.5.1',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('0.5.2',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('0.5.3',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('0.5.4',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('0.5.5',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('0.5.6',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('0.5.7',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('0.5.8',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('0.6.0',0,3)"),
+
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.0.0',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.0.1',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.0.2',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.0.3',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.0.4',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.1.0',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.1.1',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.1.2',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.1.3',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.1.4',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.1.5',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.1.6',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.1.7',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.2.0',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.2.1',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.2.2',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.2.3',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.2.4',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.3.0',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.3.1',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.3.2',1,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.3.3',1,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.4.0',1,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.4.1',1,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.4.2',1,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.4.3',1,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.4.4',1,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.5.0',1,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.5.1',1,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.5.2',1,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.6.0',1,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.7.0',1,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.8.0',1,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.8.1',1,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.8.2',1,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.8.3',1,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.9.0',1,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.9.1',1,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.9.2',1,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.10.0',1,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.10.1',1,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.10.2',1,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.11.0',1,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.12.0',1,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.12.1',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.13.1',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.13.2',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.13.3',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.13.4',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.13.5',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.13.6',0,3)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.3.1-amdjs',0,3)"),
+
+	#entering data for library 3 - underscore.js
+
 
 	#inserting in table 3
+
+	#entering data for library 1- jqeury 
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
 	 VALUES ('3.6.0/jquery.js', '1fe2bb5390a75e5d61e72c107cab528fc3c29a837d69aab7d200e1dbb5dcd239',\
 		 'C:\\JQueries\\3.0.0\\uncompressed\\jquery-3.6.0.js', 1)"),
@@ -665,8 +769,383 @@ try:
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
 		VALUES ('1.2.0/jquery.min.js', '100e1a173a6113218ffb49e13a14778fa3b91ff7fcd9fac5c523baedb0f1b7fb',\
 			'C:\\JQueries\\1.2.0\\minifed\\jquery-1.0.0.min.js', 70)"),
-		
-	#inserting data in table 4
+
+	# insert data for library 2 - jquery-migrate table
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+		VALUES('3.4.1/jquery-migrate.js', '09f417c2e643b736c19e96b99e166681af1002e9b192b84e4e85b0794e764f7f','C:\\JQueryMigrate\\3.0.0\\minified\\jquery-migrate-3.4.1.js',81)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('3.4.0/jquery-migrate.js', 'd0d91bd741e7866e04259d100e9bc89dcddb469efbc1021b210996607dd8ed5c','C:\\JQueryMigrate\\3.0.0\\minified\\jquery-migrate-3.4.0.js',82)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('3.3.2/jquery-migrate.js', '0439ad37eefd551ae47da9b30f5e949c0a093fcccc8ad033d3ddedbd90137621','C:\\JQueryMigrate\\3.0.0\\minified\\jquery-migrate-3.3.2.js',83)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('3.3.1/jquery-migrate.js', '946b94a8950f5c910c8105ff45168cea66642baa27a398b96c7b81304e2a382a','C:\\JQueryMigrate\\3.0.0\\minified\\jquery-migrate-3.3.1.js',84)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('3.3.0/jquery-migrate.js', '2c78abbdfd0a760eb8d5f8de8f0e1076520f3d82ad4aa1e80d4a5451e4e71ccb','C:\\JQueryMigrate\\3.0.0\\minified\\jquery-migrate-3.3.0.js',85)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('3.2.0/jquery-migrate.js', 'f979de8f3b6ac64b524e6b0585970c6bc6389f5b4fe7e54fca16b336762a6f04','C:\\JQueryMigrate\\3.0.0\\minified\\jquery-migrate-3.2.0.js',86)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('3.1.0/jquery-migrate.js', 'a00fe5b190a010f91bbff6f20247974931194ec18e3d90abb5bc8504799c18a3','C:\\JQueryMigrate\\3.0.0\\minified\\jquery-migrate-3.1.0.js',87)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('3.0.1/jquery-migrate.js', '56f9c5f99829774d0b2fbdcfd9750b617127e913afa0569afef6dfa22165659e','C:\\JQueryMigrate\\3.0.0\\minified\\jquery-migrate-3.0.1.js',88)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('3.0.0/jquery-migrate.js', '96c54e07edd8866e877b93244cedc1c3f5f0e0d5caef06184e2d58f8cff63eb3','C:\\JQueryMigrate\\3.0.0\\minified\\jquery-migrate-3.0.0.js',89)"),
+
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('3.4.1/jquery-migrate.min.js', '5274f11e6fb32ae0cf2dfb9f8043272865c397a7c4223b4cfa7d50ea52fbde89','C:\\JQueryMigrate\\3.0.0\\minified\\jquery-migrate-3.4.1.min.js',81)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('3.4.0/jquery-migrate.min.js', '9810aee7e6d57d8cceaa96322b88e6df46710194689ae12b284149148cabc2f3','C:\\JQueryMigrate\\3.0.0\\minified\\jquery-migrate-3.4.0.min.js',82)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('3.3.2/jquery-migrate.min.js', '029e0a2e809fd6b5dbe76abe8b7a74936be306c9a8c27c814c4d44aa54623300','C:\\JQueryMigrate\\3.0.0\\minified\\jquery-migrate-3.3.2.min.js',83)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('3.3.1/jquery-migrate.min.js', '00f96531cd15e257ff45be42cf889d5940989410c6ddbd0470dd54b217778691','C:\\JQueryMigrate\\3.0.0\\minified\\jquery-migrate-3.3.1.min.js',84)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('3.3.0/jquery-migrate.min.js', 'c19def3576a41fd9383f4d1f3460256cdd0f929292ca145aefa205cb85753d81','C:\\JQueryMigrate\\3.0.0\\minified\\jquery-migrate-3.3.0.min.js',85)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('3.2.0/jquery-migrate.min.js', 'b7ef1cb811f8db4e4c611032cf3b24d2c1256bf9794123b41ae4dea331eb54d6','C:\\JQueryMigrate\\3.0.0\\minified\\jquery-migrate-3.2.0.min.js',86)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('3.1.0/jquery-migrate.min.js', 'c9c25e5db965f66edd1ca79a3db5c19191fc06e3fdf5298f9bff2ae4ef926c17','C:\\JQueryMigrate\\3.0.0\\minified\\jquery-migrate-3.1.0.min.js',87)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('3.0.1/jquery-migrate.min.js', '1743b54e611ae08f0ddb89d8d1bc9ae7d78feacbd672c86a5f5bb3c1a582e05e','C:\\JQueryMigrate\\3.0.0\\minified\\jquery-migrate-3.0.1.min.js',88)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('3.0.0/jquery-migrate.min.js', '26494360e0db8345fef2c3e22a47055116f9cfb46f94d308684dd1036cfdeefc','C:\\JQueryMigrate\\3.0.0\\minified\\jquery-migrate-3.0.0.min.js',89)"),
+	
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.4.1/jquery-migrate.js', 'c68a880944aa03082e88bbe6c7df7747ee45f506fa777e76fb41709a0ba5a935','C:\\JQueryMigrate\\1.0.0\\minified\\jquery-migrate-1.4.1.js',90)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.4.0/jquery-migrate.js', '0f2b4c09062e99defd9cffa916147eaada93554fd252325264fd86648944a1e6','C:\\JQueryMigrate\\1.0.0\\minified\\jquery-migrate-1.4.0.js',91)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.3.0/jquery-migrate.js', 'fc68fe365635bbf276506cccfc1d90ad6474d6dacaf1966aac3e4176a414b1a7','C:\\JQueryMigrate\\1.0.0\\minified\\jquery-migrate-1.3.0.js',92)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.2.0/jquery-migrate.js', '356a8df4c95948ea9ba2c413759c033b890dd66d68991475a9184a4ce401ce12','C:\\JQueryMigrate\\1.0.0\\minified\\jquery-migrate-1.2.0.js',93)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.1.1/jquery-migrate.js', 'fd23ab8ce969cdbc761e041f63d763e11a5864a5428e61d006042f5a49464334','C:\\JQueryMigrate\\1.0.0\\minified\\jquery-migrate-1.1.1.js',94)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.1.0/jquery-migrate.js', '89f6e1276ff8e3b85ffaadce17ee1ea2171e2f8f9454c224793d9290ab57060f','C:\\JQueryMigrate\\1.0.0\\minified\\jquery-migrate-1.1.0.js',95)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.0.0/jquery-migrate.js', 'd9b635248efd4b596cad402579c29a619b4379cfb553a32589350b04c07f2bfa','C:\\JQueryMigrate\\1.0.0\\minified\\jquery-migrate-1.0.0.js',96)"),
+
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.4.1/jquery-migrate.min.js', '48eb8b500ae6a38617b5738d2b3faec481922a7782246e31d2755c034a45cd5d','C:\\JQueryMigrate\\1.0.0\\minified\\jquery-migrate-1.4.1.min.js',90)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.4.0/jquery-migrate.min.js', '9f176243815d4e6dbc79434d408273e49a1d4cc085e7f977da0e4bc1f530654a','C:\\JQueryMigrate\\1.0.0\\minified\\jquery-migrate-1.4.0.min.js',91)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.3.0/jquery-migrate.min.js', 'fbf432b5b2d82b5afa000a663ebc21817c3bbb3e2ef47d44eb973ce575b21d1a','C:\\JQueryMigrate\\1.0.0\\minified\\jquery-migrate-1.3.0.min.js',92)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.2.0/jquery-migrate.min.js', 'd700b745899949951caa29d5a442f14933ca3a2ff5e69fe84131ec490ea46834','C:\\JQueryMigrate\\1.0.0\\minified\\jquery-migrate-1.2.0.min.js',93)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.1.1/jquery-migrate.min.js', 'accc55ec16d4936f2b833342cc1291655a1638fc823541e0bf5347c7f1d63354','C:\\JQueryMigrate\\1.0.0\\minified\\jquery-migrate-1.1.1.min.js',94)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.1.0/jquery-migrate.min.js', '78c059bc96d22f347342363fbf53cfe9ffc2ff49c9d04f9dbe760c87f276c5ce','C:\\JQueryMigrate\\1.0.0\\minified\\jquery-migrate-1.1.0.min.js',95)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.0.0/jquery-migrate.min.js', 'bc5c3fd6f35abb7ebbe143e47c55d726b5ddc3c127c8002123c15c0cae7ee122','C:\\JQueryMigrate\\1.0.0\\minified\\jquery-migrate-1.0.0.min.js',96)"),
+
+	#entering data in table 3  - underscore.js 
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+		VALUES('0.1.0/underscore.js', '1e92921274b205f5c5167f7ff2cbd746bff20a3af1f5d063747a251f16b4573d','C:\\UnderscoreJS\\0.0.0\\uncompressed\\underscore-0.1.0.js',97)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.2.0/underscore.js', 'c9590d95f4717b55e97217d9054e4ef6f7835cb607fe9f51445f1ae975f45ac9','C:\\UnderscoreJS\\0.0.0\\uncompressed\\underscore-0.2.0.js',98)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.3.0/underscore.js', '3f8b1f7f37f87d851f6668d5cad8f92f99e60a89716e94bf925325cd08db7d9c','C:\\UnderscoreJS\\0.0.0\\uncompressed\\underscore-0.3.0.js',99)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.3.1/underscore.js', '7ecd3fdd325ed9377e6cef7af2701cfa5a1566085d54c89932aa9da693a79771','C:\\UnderscoreJS\\0.0.0\\uncompressed\\underscore-0.3.1.js',100)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.3.2/underscore.js', '9367560d6b25d558c2e1a5e8087beabac03844b8bf4ae84bb989664338bce718','C:\\UnderscoreJS\\0.0.0\\uncompressed\\underscore-0.3.2.js',101)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.3.3/underscore.js', '131d3939e0f5ff804f118cb62f06f36de53fa2b49c801ef167d57f22ec6a727a','C:\\UnderscoreJS\\0.0.0\\uncompressed\\underscore-0.3.3.js',103)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.4.0/underscore.js', '0584351f0a049252296d5d2000b94dcb1072445e396d5ff018121b315f9faa89','C:\\UnderscoreJS\\0.0.0\\uncompressed\\underscore-0.4.0.js',103)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.4.1/underscore.js', 'cdf5129c47b8b73c11d23eef0f9ac2c73303cc2a9e52f8f31066b29e6a305add','C:\\UnderscoreJS\\0.0.0\\uncompressed\\underscore-0.4.1.js',104)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.4.2/underscore.js', '2271e12e69d4752b68ea4d97e563d98a187317bdc1211bf5d7d38db1ff40c48a','C:\\UnderscoreJS\\0.0.0\\uncompressed\\underscore-0.4.2.js',105)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.4.3/underscore.js', 'c3d129c172470281e980bfcfa9f309ea92ad7ce77ba7ce612245d41a17b111f8','C:\\UnderscoreJS\\0.0.0\\uncompressed\\underscore-0.4.3.js',106)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.4.4/underscore.js', 'ca146bb20087edc16887edb004bde5dce56b91e9c4b4d51cb9ac7e16c03a7466','C:\\UnderscoreJS\\0.0.0\\uncompressed\\underscore-0.4.4.js',107)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.4.5/underscore.js', '33af9ff74f2b78822c24e24c7aacbd3e5f6509a1f0d7b6d97c56070ef5daedef','C:\\UnderscoreJS\\0.0.0\\uncompressed\\underscore-0.4.5.js',108)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.4.6/underscore.js', '0c54c1f6901efabc51287b1742006864abe43bf1088e04d833d4f55d2184120c','C:\\UnderscoreJS\\0.0.0\\uncompressed\\underscore-0.4.6.js',109)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.4.7/underscore.js', '4cc5319afcffff9822b2881a70afc34f27c4d439b88add1e95e4587930a67487','C:\\UnderscoreJS\\0.0.0\\uncompressed\\underscore-0.4.7.js',110)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.5.0/underscore.js', '49749c2593b419be7b828aed23304650faefefe83874cce9daac5a21cda85d89','C:\\UnderscoreJS\\0.0.0\\uncompressed\\underscore-0.5.0.js',111)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.5.1/underscore.js', '2c65f20705e9215f6ff7c81cc7635db9a092a4e15c5cc84c5954ac832f65a11b','C:\\UnderscoreJS\\0.0.0\\uncompressed\\underscore-0.5.1.js',112)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.5.2/underscore.js', '06dea7c64da176e497435c24a9ab90c18705e4c95f01018b3b47719f8c3089e9','C:\\UnderscoreJS\\0.0.0\\uncompressed\\underscore-0.5.2.js',113)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.5.3/underscore.js', '677c7845b81df2f260d6ee6985c45d97d96de4be6b8629c225b335c4e931ccad','C:\\UnderscoreJS\\0.0.0\\uncompressed\\underscore-0.5.3.js',114)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.5.4/underscore.js', 'eb1b53350a8c63533f626c568f3448143fb2f39c0976fb202ac08b98c04a20a5','C:\\UnderscoreJS\\0.0.0\\uncompressed\\underscore-0.5.4.js',115)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.5.5/underscore.js', '5c712a46736d6b5066fa20f19069f43b24f3a9660572b4064b1899521f56bed8','C:\\UnderscoreJS\\0.0.0\\uncompressed\\underscore-0.5.5.js',116)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.5.6/underscore.js', 'c5ee7a4d2ddc6fdadcbe3f917c230fbe186584dc6dd40e69dc0dbc908f214b45','C:\\UnderscoreJS\\0.0.0\\uncompressed\\underscore-0.5.6.js',117)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.5.7/underscore.js', 'b6088f2ca702af07fca025f4e9d96c950f42ffc916d00539684926243c7ae569','C:\\UnderscoreJS\\0.0.0\\uncompressed\\underscore-0.5.7.js',118)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.5.8/underscore.js', 'b2f5430c7c0f2422ea27fe06603d2fc7036b81a2c9a9ebe0675d018413b32f3a','C:\\UnderscoreJS\\0.0.0\\uncompressed\\underscore-0.5.8.js',119)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.6.0/underscore.js', 'd20d94e6c7dce8284af82c64f8deaa39085b4e18c3ff4096811c09f5e457c87e','C:\\UnderscoreJS\\0.0.0\\uncompressed\\underscore-0.6.0.js',120)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.0.0/underscore.js', '2481bcf7ecd425ae55874057efaabbf741565b93e3e0612190774931bbe74c58','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.0.0.js',121)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.0.1/underscore.js', 'eca2e496fbc8920b9b72363afe85d071e2bc58619f7075e276053c55b4c2297f','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.0.1.js',122)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.0.2/underscore.js', '2d927ca2dafbe1b3122e5f604fbf8dfc82f98b670e3bc3685e78eb5a46c86564','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.0.2.js',123)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.0.3/underscore.js', 'abe29f5213216c659c3cf2f0c02f279fd30ad351818b3616460f082e934b9d1c','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.0.3.js',124)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.0.4/underscore.js', 'b63ef97b9f85b0d4a07926b186083c9952568e26bbb65d610b592d15208f79a9','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.0.4.js',125)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.1.0/underscore.js', 'a646f62263e789d12b4d0fab38972f78ed8be6b0e358674dace79ac974225e1d','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.1.0.js',126)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.1.1/underscore.js', '27875e0a6e29e5471d73333b2c27ee85f17aa2ae8001a40a37faa3187fcf29c7','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.1.1.js',127)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.1.2/underscore.js', '52514ce8ed887e2978e039e61a5483fb7adb5a7e7c57f351be6af32270730531','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.1.2.js',128)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.1.3/underscore.js', '7fa6e7d6318dc2c336ae8a8c29cc11027e7db4e1e9890e8a08424c1d73031d96','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.1.3.js',129)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.1.4/underscore.js', '9198aab9eeab6562fd7fa74a022ba239d88a7c64e05acb4c781c9670229186b2','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.1.4.js',130)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.1.5/underscore.js', '6a52dcbe60c61158795cc9f023063121c11ce862b3e8dd71150523cc8d15ced1','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.1.5.js',131)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.1.6/underscore.js', 'ca05baf248bc3d7cb0200552785603b8995b132d886a68e75a5fe8bc338198c8','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.1.6.js',132)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.1.7/underscore.js', 'b81b571bbc77c027807e0f0cdbf7834c273bbc36069d560f83960472cba2428b','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.1.7.js',133)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.2.0/underscore.js', '420e5861e1bc03a5a93660256af02d3c7de7fbce2fa5f07183521a5d22231117','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.2.0.js',134)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.2.1/underscore.js', '2e2e4a7d2772c9d1ddfab745f5f973b59b4ed741c51b994334bebc454af041ca','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.2.1.js',135)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.2.2/underscore.js', '9836e801c314da41ebffb09a46eb0d313e76d4aa5242f7c3fff8a3a20bd45038','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.2.2.js',136)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.2.3/underscore.js', '22729344b976cc44fed6bb389059a647ceb8a0b89ae5c5120e6f42ecc2522b0b','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.2.3.js',137)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.2.4/underscore.js', 'f53f5b8c13f99c295f48b756cb23b2803246b346dd4605d396bcfce31a60fdf9','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.2.4.js',138)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.3.0/underscore.js', '6422a2fa2f0f31c185c169bd31366c93fa885f554ad5e7e3a4c23d6742a1d5de','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.3.0.js',139)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.3.1/underscore.js', 'f808f0aa32fbe90fb9c9c846917faff3fdd4e236c284b76c02dd33753dc90177','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.3.1.js',140)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.3.2/underscore.js', '35b15b04a8110f2631529d32d093d6c7c1007b05f71f649c64f31b0beae61aca','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.3.2.js',141)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.3.3/underscore.js', '49f14bad610f40f0ae76a33c55ef89a1e694219bab49b1b99cb53d754774c0fc','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.3.3.js',142)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.4.0/underscore.js', '1258fb3ec5df4f2fa771d26aff20a07e9b71f1c08dfd45c86fc00ed8f0326c69','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.4.0.js',143)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.4.1/underscore.js', '3eec9a11de61554b41d142f57ea610747e44699338e2b471f1109548ac0597b7','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.4.1.js',144)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.4.2/underscore.js', 'f7852d7466f17019073cb7a1a794a30b91b13f01cc49774f4075a695270c0a3b','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.4.2.js',145)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.4.3/underscore.js', 'a10aa2eb9078c2e19f181ac722b1c19a29b8db1069556c508a3beb5c46289d7b','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.4.3.js',146)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.4.4/underscore.js', '32037dee4499126b99715750145392c8b00a7db213b2052e7032afb10fadd5da','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.4.4.js',147)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.5.0/underscore.js', '57fbeb550df02488a31a2f279f41cffe469ba3c836042a35d03492385227e53c','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.5.0.js',148)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.5.1/underscore.js', '484e5a48a1d1eafdf4cfaeacafea998c3a43d25b6277ce0bd29737f5d081b598','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.5.1.js',149)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.5.2/underscore.js', '023f31d6996b4ff1b3543fea50be852ecbdbdce8b9e8d0610b72918e1f9d91c3','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.5.2.js',150)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.6.0/underscore.js', 'ee8ba6b58a9c67d9f7148b31f90851767c45aeaa8c86fbf7e981ba255d39240b','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.6.0.js',151)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.7.0/underscore.js', '53596846ab864b5bc4e4605181ad18feac56662185de74eff3373e98508cf0eb','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.7.0.js',152)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.8.0/underscore.js', 'c45c8504a0e57560128479b578e703f9533b6d56feaee5c773030138a3d3b4a1','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.8.0.js',153)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.8.1/underscore.js', '13332633f2eae3147df1ca250381a2dc391a68b353a383b2805f901d4c67923b','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.8.1.js',154)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.8.2/underscore.js', 'b84a7a5ac0e8afc4f176b95606590bfc56044eeae9286097bdee013a6909fde5','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.8.2.js',155)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.8.3/underscore.js', '4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.8.3.js',156)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.9.0/underscore.js', '51aa76b532ba52182c46386e5bd2df155103d3abcd49300c7ecb6bdc7d93a25b','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.9.0.js',157)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.9.1/underscore.js', '3b8d7bf449fccda6ce94f60136f1a9f1c174ba1d2f9d26695b843a525d61fbc7','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.9.1.js',158)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.9.2/underscore.js', '716f46856dfd3d43a2848e33c91248516c3284c45e341e910e62f02fb926882e','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.9.2.js',159)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.10.0/underscore.js', '1c6728a3d862b85c33cefce07c6652c3301d98a5664fa1e2fb53732a9af4256b','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.10.0.js',160)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.10.1/underscore.js', 'a876a5e66659878bee48446fdfdcf9a11e9cde905e4f2c73ac966435ea5b1eee','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.10.1.js',161)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.10.2/underscore.js', '1445bbc252e10d7a7aab5d679a29b398b4a446ad9cc9712d63bb6eadee7c989d','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.10.2.js',162)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.11.0/underscore.js', '4136c101522c2915d8bd5d47e807d1b5fb02712ec51e893cf1dd4a3e39af68bf','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.11.0.js',163)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.12.0/underscore.js', '9964412824ab0ffe530e8019cf330e2aa2c3eacea489fe387f909e12c0f0d433','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.12.0.js',164)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.12.1/underscore.js', '7ad808820e110c0c96c0c551cfb75a9aa7d36aa2653dda02be57f07a2f7eebd7','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.12.1.js',165)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.13.1/underscore.js', 'cc10f799cd0f6b65f95c4012445497e5ba3cb9f51964a9468940b27bde98b487','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.13.1.js',166)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.13.2/underscore.js', 'ed34e97cd4a4e8e0eecc3ac156f5bc4ee78ebdd9f9f8417635102bbe13b189cb','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.13.2.js',167)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.13.3/underscore.js', '586128266de6b7401289f79caa3b3e38d12eda388422c43a1757d347e36b7e61','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.13.3.js',168)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.13.4/underscore.js', '03203363ad99fc8de92e0096e1419ff416909cb9e6d1d7e05e64905387d1949f','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.13.4.js',169)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.13.5/underscore.js', 'dc2b5d97ad0674a81c7916ff790669c5997e3958ee8b37cdea450e083194ab76','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.13.5.js',170)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.13.6/underscore.js', '56bf845439057fbf61e9925905b3c5bea88886604189dcb5312bd5281e4415f5','C:\\UnderscoreJS\\1.0.0\\uncompressed\\underscore-1.13.6.js',171)"),
+
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.1.0/underscore.min.js', 'a444f56b999ff046d62f604efc34fe58e477a75881399bc5ed78217399b3d84d','C:\\UnderscoreJS\\0.0.0\\minified\\underscore-min-0.1.0.js',97)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.2.0/underscore.min.js', '3f7df2dd7c8ff21b0d72f4d1ae3c0903e46c582c830d058aedd84632d5e3967f','C:\\UnderscoreJS\\0.0.0\\minified\\underscore-min-0.2.0.js',98)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.3.0/underscore.min.js', 'd8e7484b23bbd8265ee4041b7eeb26aaf04239a5e242e0effb0571d4feed657d','C:\\UnderscoreJS\\0.0.0\\minified\\underscore-min-0.3.0.js',99)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.3.1/underscore.min.js', '0806da0eee2c9772c8701052a6573977cf66c2e2d4f47e25b061275d5069d851','C:\\UnderscoreJS\\0.0.0\\minified\\underscore-min-0.3.1.js',100)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.3.2/underscore.min.js', '45ad86935ef1512cf25dd81ef9c007199339624629e4dbe22d66df953a19e87a','C:\\UnderscoreJS\\0.0.0\\minified\\underscore-min-0.3.2.js',101)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.3.3/underscore.min.js', '06f94f5e768e974bf1eae25fdf78f3e593323b79f850e6efdd509ff9728c7491','C:\\UnderscoreJS\\0.0.0\\minified\\underscore-min-0.3.3.js',102)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.4.0/underscore.min.js', 'd944041291f92748cf4bc0428588c764bec4031905a3932b333220fae577a572','C:\\UnderscoreJS\\0.0.0\\minified\\underscore-min-0.4.0.js',103)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.4.1/underscore.min.js', 'a54492496c7c6fe2acdeb30acf9d86c77e644df4f474638d90207cb951be4f07','C:\\UnderscoreJS\\0.0.0\\minified\\underscore-min-0.4.1.js',104)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.4.2/underscore.min.js', '340642c78d53a4206d48fb0fcbb2e72520b0c6f786b11be0c436ffaf62f9c47e','C:\\UnderscoreJS\\0.0.0\\minified\\underscore-min-0.4.2.js',105)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.4.3/underscore.min.js', '153dcb9a741d2d9a000b51b4a891938272688724bdc07add3d1802a712e8c747','C:\\UnderscoreJS\\0.0.0\\minified\\underscore-min-0.4.3.js',106)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.4.4/underscore.min.js', '972fc0264a13f9beb290f2394f9c490ebb3275b585591b7e49dc2e42b6f49875','C:\\UnderscoreJS\\0.0.0\\minified\\underscore-min-0.4.4.js',107)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.4.5/underscore.min.js', '12a5cf24abdc0f2d03c729aabda04300ce9c8ed46b82b94e10e07cbf1d7b527b','C:\\UnderscoreJS\\0.0.0\\minified\\underscore-min-0.4.5.js',108)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.4.6/underscore.min.js', '90c1eae7896407aee774b1fd72ac1905afb25ee2c6843afeeef57167b8c8202c','C:\\UnderscoreJS\\0.0.0\\minified\\underscore-min-0.4.6.js',109)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.4.7/underscore.min.js', 'b95568a49cf9c45dce1418f774e741d2d68f6c03c59e2e5caca8337f5868dc5c','C:\\UnderscoreJS\\0.0.0\\minified\\underscore-min-0.4.7.js',110)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.5.0/underscore.min.js', 'e675194aaec0f1accc3d8d0d4216f5d7f045844eff3ae4d14547238b0227af3b','C:\\UnderscoreJS\\0.0.0\\minified\\underscore-min-0.5.0.js',111)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.5.1/underscore.min.js', '15f0ffc7366d51dce455367d7a6520fa28e0b4c30e2085d68809d722925276ce','C:\\UnderscoreJS\\0.0.0\\minified\\underscore-min-0.5.1.js',112)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.5.2/underscore.min.js', '1ed91ae59335cd8592ba20615cd3cbd072fdb7c8b7180f7b8cfcd1ef7a0c52b8','C:\\UnderscoreJS\\0.0.0\\minified\\underscore-min-0.5.2.js',113)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.5.3/underscore.min.js', '84bf79f9a2144e5d684618786d1aa23abf6794a7ad2db1c2bffd89ebe1d497f5','C:\\UnderscoreJS\\0.0.0\\minified\\underscore-min-0.5.3.js',114)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.5.4/underscore.min.js', '549f874385e98c38e9dc7be52a20a134edb204743172f230eed8abca767ade91','C:\\UnderscoreJS\\0.0.0\\minified\\underscore-min-0.5.4.js',115)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.5.5/underscore.min.js', 'cae3580d9e4640a83be69b8d78d74f9b5b7602ea0eb380323cbd955d79329c4c','C:\\UnderscoreJS\\0.0.0\\minified\\underscore-min-0.5.5.js',116)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.5.6/underscore.min.js', 'cf60130f04ef4c8db84851e917673b883f52a1728c1f228d0df09b2b85f93412','C:\\UnderscoreJS\\0.0.0\\minified\\underscore-min-0.5.6.js',117)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.5.7/underscore.min.js', '6b56a1d06ab640c7b5be754f834a14985a0158292d4e3e2b77424a1ab3c2798c','C:\\UnderscoreJS\\0.0.0\\minified\\underscore-min-0.5.7.js',118)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.5.8/underscore.min.js', 'cd59ec1995c8058820620f6c8648a1f4b61af2b65ce63d0fa70efa8576808c03','C:\\UnderscoreJS\\0.0.0\\minified\\underscore-min-0.5.8.js',119)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('0.6.0/underscore.min.js', 'daef73caf247f00b990b30d57fe2e8961cc9f706bad627ae786d8536accd2590','C:\\UnderscoreJS\\0.0.0\\minified\\underscore-min-0.6.0.js',120)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.0.0/underscore.min.js', '84a3280c36567b81d7bbfc395704d410875f297fbf9e26564560ac8aabab496c','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.0.0.js',121)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.0.1/underscore.min.js', 'cb725f2712784873cb44915c807ca75522fb175eb81440198ee81555267852da','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.0.1.js',122)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.0.2/underscore.min.js', 'de12e081e16488205fb40849632c52de29e0fe0c8e771563f10af8f76e4958c0','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.0.2.js',123)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.0.3/underscore.min.js', '729ecd8f55e795f50fe5b1d757e9c82274d746e9977d24ee91451ef26091feb8','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.0.3.js',124)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.0.4/underscore.min.js', '0aa898048336d9c8983e3c63c282e7e3ff1a328ddbfa9fd7b44ea2d04e8b7ad2','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.0.4.js',125)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.1.0/underscore.min.js', '84b6fed71c0ffd48254f28cd21762849c78d837d07ce034c937a03efc7e2f83e','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.1.0.js',126)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.1.1/underscore.min.js', 'f25e76a45025e589976578cf27d22091f5d89d5e47a68372f6b3a521d371b04b','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.1.1.js',127)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.1.2/underscore.min.js', 'daa17b2aec40a550d1c0824ddfcc989fa607b4c4b4f115a7413df22b3b343f8f','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.1.2.js',128)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.1.3/underscore.min.js', '93f9f6be963fbb163722dbf17b0f916d68523506eaf36757ecce741dd0e41eaa','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.1.3.js',129)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.1.4/underscore.min.js', 'dd1890ef89f59d38b2478e76dc362e139f17af5bdc81c47bfc1110cdfc14c4d0','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.1.4.js',130)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.1.5/underscore.min.js', 'b47c3e3341e50192c433872310fef0a41bcfdcdd8d637fd7aa0a7f6bad40cbc8','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.1.5.js',131)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.1.6/underscore.min.js', '906c72aff6a58625cdc31d47df29d6f0adecbcad2a56b42876d660acb247aba5','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.1.6.js',132)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.1.7/underscore.min.js', 'efcb9871d25921b09b15b52196189a7efbe6ef01e67e3015bfd31c90537aa350','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.1.7.js',133)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.2.0/underscore.min.js', '0e9fe368d777cd4bc5580a1e570128c5f1564c09ae8b6ae0ef7fa7c8d6106a40','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.2.0.js',134)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.2.1/underscore.min.js', '5363c436871957e5b2a4dea399545feda648db13d0414910cc1acee12f05cdab','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.2.1.js',135)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.2.2/underscore.min.js', '42d6c56d8a983ca98112fdc9e75688c34bedd9d1308e5740deb71993d6c1ae3a','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.2.2.js',136)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.2.3/underscore.min.js', 'dd5a5741cf628f152ad39dadca9aeef15c19ac3de69ecf41b4321b577641c056','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.2.3.js',137)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.2.4/underscore.min.js', '5e88c8fd49ad0a719f6f2adc71d650e7c201bbcfbe46fdf532fbfce23fcc23b6','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.2.4.js',138)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.3.0/underscore.min.js', 'b832c2eccf70ade054d627651551196e016e9e3d6a35282afcceb7aa7ff99c41','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.3.0.js',139)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.3.1/underscore.min.js', '42d8fad13bc28fc726775196ec9ab953febf9bde175c5845128361c953fa17f4','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.3.1.js',140)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.3.1-amdjs/underscore.min.js', '97af66f1c8fc249ce40007680481e40e82aac62c14e06ee03907eb6a2316d01e','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.3.1-amdjs.js',172)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.3.2/underscore.min.js', 'f5300eb60743a9b5f5e015cfa3a29cc187051cb6c8097e821164c1cad2f86cc7','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.3.2.js',141)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.3.3/underscore.min.js', '0f201fe52208471c863c292da4990ca7bb7ca5d58b3f1ea2a57095ff764c6848','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.3.3.js',142)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.4.0/underscore.min.js', 'faab51654de7d65c0cab1e32c0403a7752e0e6a4cccb433d823d4a1de563c515','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.4.0.js',143)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.4.1/underscore.min.js', 'ab0d4345dc2801d2667ff3a0ae25926d20154ba7540f6797ad4baab4681e2fa8','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.4.1.js',144)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.4.2/underscore.min.js', '03ae3ad62082d4e7443de69006761d2e59b49e7f11bc209b8a5a01762d28d6b2','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.4.2.js',145)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.4.3/underscore.min.js', 'c53816234c2fd19da23c01faa3b01169a1c38bc466bcd9a282a019861a84bbb8','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.4.3.js',146)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.4.4/underscore.min.js', '27829b1d29e3fb532d761987d4057275d1e9ecdd3eaf4b4c40a29382590b820e','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.4.4.js',147)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.5.0/underscore.min.js', '817af2c86f48426d2756c83fbdf86bc2b4993e4f377d9e4b6c708aa669ab0dc5','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.5.0.js',148)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.5.1/underscore.min.js', '0b44e36460d066ba2e00a4f1a0adb193ca14a99ce5c2222099a4247ba6ee9f01','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.5.1.js',149)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.5.2/underscore.min.js', 'f205111f00aa36a51e6b312a74e58abc82394f207e48af4d596680b2a0125c2a','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.5.2.js',150)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.6.0/underscore.min.js', '163189ef69a3c210a04bb4cac2c336119d78b576fb84b4231977514419eb0faf','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.6.0.js',151)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.7.0/underscore.min.js', '7b6fbd8af1c538408f2fe7eef5f6c52b85db12ab91b63277287e5e9ea83a4931','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.7.0.js',152)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.8.0/underscore.min.js', '6e5582e8b2817eecbc135f2b1c312ec5e6a7217c7eafc658423c939b87c9134d','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.8.0.js',153)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.8.1/underscore.min.js', '8b7dbdfa7de515cdc794dfdef15b63c2cc3228f7ff26670494b0f7d089b86f38','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.8.1.js',154)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.8.2/underscore.min.js', '2de19ea3b85e03239dd9cbe30d9545a1b5a7ce2f0662feaeaf3d2d088179ea5c','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.8.2.js',155)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.8.3/underscore.min.js', 'a1b6400a21ddee090e93d8882ffa629963132785bfa41b0abbea199d278121e9','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.8.3.js',156)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.9.0/underscore.min.js', 'b6be05bd7559a7c9e45bb4ef5b83980392963acedf7369b907a2cdf803a7d552','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.9.0.js',157)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.9.1/underscore.min.js', '1bb03826b26326516a3f4c9a9b39f03e3000a4828f91a75e1dfc88c2269af5ed','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.9.1.js',158)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.9.2/underscore.min.js', '22b404d34700979e4c9746c855a72f38d926d317ca16336e1e24614664a6ff2e','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.9.2.js',159)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.10.0/underscore.min.js', '1e4b1c5d112131699d84de1eb61be01927f23ee11d5f6c6accca92063a75fa95','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.10.0.js',160)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.10.1/underscore.min.js', '2c00a9b27d8c5ea118596358bcd93e4ca765a97ba133e4106f9153ea58da9359','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.10.1.js',161)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.10.2/underscore.min.js', '6afd53bf2c2d67866ac828ffe8776d087489767f341c0cd380405326dfcef2e7','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.10.2.js',162)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.11.0/underscore.min.js', 'd62f9c89984ad059d574ae6b64c9134628041695c09290643e2d53238638bdda','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.11.0.js',163)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.12.0/underscore.min.js', '1bc0ea4e2fe66ac337fb1863bbdb4c8f044ee4e84dbe0f0f1b3959bebfa539c1','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.12.0.js',164)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.12.1/underscore.min.js', '326d2fe3bd8343f6167fdbcb4e3e83e1dfdb2cfa538c4e832c1b5948acecbe18','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.12.1.js',165)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.13.1/underscore.min.js', '218fb1c1fc72e9af6b866f430be2a67fa376392b4db2f4dbf32772671b6ae55c','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.13.1.js',166)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.13.2/underscore.min.js', '16ef4ffef8378d986b83eff6c680fdc90a76b525ce89a11280f814fc7f62302a','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.13.2.js',167)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.13.3/underscore.min.js', '1e8f79ce8eee1b5b04c6fb9130eae9e9d4ff042d28d82a6a154b36c06dd71dae','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.13.3.js',168)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.13.4/underscore.min.js', '640f1d5e961c8aab91b9338c816111a1e80b7ebbc5666f184e647306fd17e697','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.13.4.js',169)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.13.5/underscore.min.js', '6d2610a0242298f377adba0184469e2554a1ba07d5804119e245f3eb55fa3c3f','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.13.5.js',170)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('1.13.6/underscore.min.js', '25f436e933246f279adc4967725a4d915e0fc7a6419d3b956a945bb5782dc6e5','C:\\UnderscoreJS\\1.0.0\\minified\\underscore-min-1.13.6.js',171)"),
+			
+	#inserting data in table 4 
+	#jquery data entry - lib 1
 	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js ', 1)"),
 	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js', 2)"),
 	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.js', 3)"),
@@ -750,83 +1229,278 @@ try:
 	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.1/jquery.min.js', 75)"),
 	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min.js', 76)"),
 
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js ', 77)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.3/jquery.js ', 78)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.2/jquery.js ', 79)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.js ', 80)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.js ', 81)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.js ', 82)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.js ', 83)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.js ', 84)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.js ', 85)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.js ', 86)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.js ', 87)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.0/jquery.js ', 88)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.js ', 89)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.js ', 90)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.js ', 91)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.2/jquery.js ', 92)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.1/jquery.js ', 93)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.js ', 94)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.6.4/jquery.js ', 98)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.6.3/jquery.js ', 99)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.6.2/jquery.js ', 100)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.6.1/jquery.js ', 101)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.5.1/jquery.js ', 104)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.js ', 106)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.3/jquery.js ', 107)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.2/jquery.js ', 108)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.1/jquery.js ', 109)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.0/jquery.js ', 110)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.3.2/jquery.js ', 111)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.3.1/jquery.js ', 112)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.3.0/jquery.js ', 113)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.2.6/jquery.js ', 114)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.2.3/jquery.js ', 117)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js', 77)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.3/jquery.js', 78)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.2/jquery.js', 79)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.js', 80)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.js', 81)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.js', 82)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.js', 83)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.js', 84)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.js', 85)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.js', 86)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.js', 87)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.0/jquery.js', 88)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.js', 89)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.js', 90)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.js', 91)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.2/jquery.js', 92)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.1/jquery.js', 93)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.js', 94)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.6.4/jquery.js', 98)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.6.3/jquery.js', 99)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.6.2/jquery.js', 100)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.6.1/jquery.js', 101)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.5.1/jquery.js', 104)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.js', 106)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.3/jquery.js', 107)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.2/jquery.js', 108)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.1/jquery.js', 109)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.0/jquery.js', 110)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.3.2/jquery.js', 111)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.3.1/jquery.js', 112)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.3.0/jquery.js', 113)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.2.6/jquery.js', 114)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.2.3/jquery.js', 117)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js', 131)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.3/jquery.min.js', 132)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.2/jquery.min.js', 133)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.j', 134)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.min.j', 135)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.j', 136)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.j', 137)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.j', 138)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.j', 139)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.j', 140)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.j', 141)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.0/jquery.min.j', 142)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js', 143)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.min.js', 144)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js', 145)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.2/jquery.min.js', 146)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.1/jquery.min.js', 147)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js', 148)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js', 149)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.1/jquery.min.js', 150)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.0/jquery.min.js', 151)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.6.4/jquery.min.js', 152)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.6.3/jquery.min.js', 153)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.6.2/jquery.min.js', 154)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.6.1/jquery.min.js', 155)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.5.1/jquery.min.js', 158)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js', 160)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.3/jquery.min.js', 161)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.2/jquery.min.js', 162)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.1/jquery.min.js', 163)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.0/jquery.min.js', 164)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.3.2/jquery.min.js', 165)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.3.1/jquery.min.js', 166)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.3.0/jquery.min.js', 167)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.2.6/jquery.min.js', 168)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.2.3/jquery.min.js', 171)")
 
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js ', 131)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.3/jquery.min.js ', 132)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.2/jquery.min.js ', 133)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js ', 134)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.min.js ', 135)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js ', 136)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js ', 137)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js ', 138)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js ', 139)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js ', 140)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js ', 141)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.0/jquery.min.js ', 142)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js ', 143)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.min.js ', 144)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js ', 145)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.2/jquery.min.js ', 146)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.1/jquery.min.js ', 147)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js ', 148)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js ', 149)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.1/jquery.min.js ', 150)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.0/jquery.min.js ', 151)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.6.4/jquery.min.js ', 152)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.6.3/jquery.min.js ', 153)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.6.2/jquery.min.js ', 154)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.6.1/jquery.min.js ', 155)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.5.1/jquery.min.js ', 158)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js ', 160)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.3/jquery.min.js ', 161)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.2/jquery.min.js ', 162)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.1/jquery.min.js ', 163)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.0/jquery.min.js ', 164)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.3.2/jquery.min.js ', 165)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.3.1/jquery.min.js ', 166)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.3.0/jquery.min.js ', 167)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.2.6/jquery.min.js ', 168)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.2.3/jquery.min.js ', 171)")
+	# jquery-migrate -library 2
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.1/jquery-migrate.js',175)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.0/jquery-migrate.js',176)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.2/jquery-migrate.js',177)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.1/jquery-migrate.js',178)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.0/jquery-migrate.js',179)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.2.0/jquery-migrate.js',180)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.1.0/jquery-migrate.js',181)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.1/jquery-migrate.js',182)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.0/jquery-migrate.js',183)"),
+
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.1/jquery-migrate.min.js',184)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.0/jquery-migrate.min.js',185)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.2/jquery-migrate.min.js',186)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.1/jquery-migrate.min.js',187)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.0/jquery-migrate.min.js',188)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.2.0/jquery-migrate.min.js',189)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.1.0/jquery-migrate.min.js',190)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.1/jquery-migrate.min.js',191)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.0/jquery-migrate.min.js',192)"),
+
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.1/jquery-migrate.js',193)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.0/jquery-migrate.js',194)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.3.0/jquery-migrate.js',195)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.0/jquery-migrate.js',196)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.1.1/jquery-migrate.js',197)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.1.0/jquery-migrate.js',198)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.0.0/jquery-migrate.js',199)"),
+
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.1/jquery-migrate.min.js',200)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.0/jquery-migrate.min.js',201)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.3.0/jquery-migrate.min.js',202)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.0/jquery-migrate.min.js',203)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.1.1/jquery-migrate.min.js',204)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.1.0/jquery-migrate.min.js',205)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.0.0/jquery-migrate.min.js',206)"),
+
+	#inserting data for table 3 - underscore.js
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.1.0/underscore.js',207)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.2.0/underscore.js',208)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.3.0/underscore.js',209)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.3.1/underscore.js',210)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.3.2/underscore.js',211)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.3.3/underscore.js',212)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.4.0/underscore.js',213)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.4.1/underscore.js',214)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.4.2/underscore.js',215)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.4.3/underscore.js',216)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.4.4/underscore.js',217)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.4.5/underscore.js',218)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.4.6/underscore.js',219)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.4.7/underscore.js',220)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.5.0/underscore.js',221)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.5.1/underscore.js',222)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.5.2/underscore.js',223)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.5.3/underscore.js',224)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.5.4/underscore.js',225)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.5.5/underscore.js',226)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.5.6/underscore.js',227)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.5.7/underscore.js',228)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.5.8/underscore.js',229)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.6.0/underscore.js',230)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.0.0/underscore.js',231)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.0.1/underscore.js',232)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.0.2/underscore.js',233)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.0.3/underscore.js',234)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.0.4/underscore.js',235)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.1.0/underscore.js',236)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.1.1/underscore.js',237)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.1.2/underscore.js',238)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.1.3/underscore.js',239)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.1.4/underscore.js',240)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.1.5/underscore.js',241)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.1.6/underscore.js',242)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.1.7/underscore.js',243)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.2.0/underscore.js',244)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.2.1/underscore.js',245)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.2.2/underscore.js',246)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.2.3/underscore.js',247)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.2.4/underscore.js',248)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.0/underscore.js',249)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.1/underscore.js',250)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.2/underscore.js',251)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.3/underscore.js',252)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.0/underscore.js',253)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.1/underscore.js',254)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.2/underscore.js',255)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.3/underscore.js',256)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore.js',257)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.0/underscore.js',258)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.1/underscore.js',259)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore.js',260)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore.js',261)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore.js',262)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.0/underscore.js',263)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.1/underscore.js',264)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.2/underscore.js',265)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js',266)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.0/underscore.js',267)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore.js',268)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.2/underscore.js',269)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.10.0/underscore.js',270)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.10.1/underscore.js',271)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.10.2/underscore.js',272)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.11.0/underscore.js',273)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.12.0/underscore.js',274)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.12.1/underscore.js',275)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.1/underscore.js',276)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.2/underscore.js',277)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.3/underscore.js',278)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.4/underscore.js',279)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.5/underscore.js',280)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.6/underscore.js',281)"),
+
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.1.0/underscore-min.js',282)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.2.0/underscore-min.js',283)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.3.0/underscore-min.js',284)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.3.1/underscore-min.js',285)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.3.2/underscore-min.js',286)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.3.3/underscore-min.js',287)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.4.0/underscore-min.js',288)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.4.1/underscore-min.js',289)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.4.2/underscore-min.js',290)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.4.3/underscore-min.js',291)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.4.4/underscore-min.js',292)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.4.5/underscore-min.js',293)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.4.6/underscore-min.js',294)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.4.7/underscore-min.js',295)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.5.0/underscore-min.js',296)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.5.1/underscore-min.js',297)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.5.2/underscore-min.js',298)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.5.3/underscore-min.js',299)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.5.4/underscore-min.js',300)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.5.5/underscore-min.js',301)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.5.6/underscore-min.js',302)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.5.7/underscore-min.js',303)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.5.8/underscore-min.js',304)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/0.6.0/underscore-min.js',305)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.0.0/underscore-min.js',306)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.0.1/underscore-min.js',307)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.0.2/underscore-min.js',308)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.0.3/underscore-min.js',309)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.0.4/underscore-min.js',310)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.1.0/underscore-min.js',311)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.1.1/underscore-min.js',312)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.1.2/underscore-min.js',313)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.1.3/underscore-min.js',314)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.1.4/underscore-min.js',315)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.1.5/underscore-min.js',316)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.1.6/underscore-min.js',317)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.1.7/underscore-min.js',318)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.2.0/underscore-min.js',319)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.2.1/underscore-min.js',320)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.2.2/underscore-min.js',321)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.2.3/underscore-min.js',322)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.2.4/underscore-min.js',323)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.0/underscore-min.js',324)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.1/underscore-min.js',325)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.1-amdjs/underscore-amd-min.js',326)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.2/underscore-min.js',327)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.3/underscore-min.js',328)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.0/underscore-min.js',329)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.1/underscore-min.js',330)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.2/underscore-min.js',331)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.3/underscore-min.js',332)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js',333)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.0/underscore-min.js',334)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.1/underscore-min.js',335)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js',336)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js',337)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js',338)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.0/underscore-min.js',339)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.1/underscore-min.js',340)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.2/underscore-min.js',341)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js',342)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.0/underscore-min.js',343)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js',344)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.2/underscore-min.js',345)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.10.0/underscore-min.js',346)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.10.1/underscore-min.js',347)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.10.2/underscore-min.js',348)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.11.0/underscore-min.js',349)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.12.0/underscore-min.js',350)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.12.1/underscore-min.js',351)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.1/underscore-min.js',352)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.2/underscore-min.js',353)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.3/underscore-min.js',354)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.4/underscore-min.js',355)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.5/underscore-min.js',356)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.6/underscore-min.js',357)"),
+
 
 	for row1 in (conn.execute("SELECT * FROM variant")):
 		print(row1)
 
+	for row2 in (conn.execute("SELECT * FROM url")):
+		print(row2)
 	#conn.close())
 	conn.commit()
-
+	print("######################################################################################")
+	for row1 in (conn.execute("SELECT * FROM version")):
+		print(row1)
 except Exception as e: 
 	print(type(e))
 	print(e) 
