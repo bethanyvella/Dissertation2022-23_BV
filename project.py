@@ -72,7 +72,6 @@ for count, url in enumerate(csv_reader):
                     FROM url INNER JOIN variant on url.variantID = variant.variantID \
                     INNER JOIN version on version.versionID = variant.versionID")            
                     rowsCDN = cursor.fetchall()
-
                     
                     for dataCDN in rowsCDN:
                         url_CDN_data = dataCDN[0]

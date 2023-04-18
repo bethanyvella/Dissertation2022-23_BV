@@ -47,9 +47,7 @@ try:
 	conn.execute('INSERT INTO library (libraryName) VALUES ("jQuery-Migrate")'),
 	conn.execute('INSERT INTO library (libraryName) VALUES ("Underscore.js")'),
 	conn.execute('INSERT INTO library (libraryName) VALUES ("Moment.js")'),
-	conn.execute('INSERT INTO library (libraryName) VALUES ("Modernizr.js")'),
-	conn.execute('INSERT INTO library (libraryName) VALUES ("Require.js")'),
-	conn.execute('INSERT INTO library (libraryName) VALUES ("jQuery-Form")')
+	conn.execute('INSERT INTO library (libraryName) VALUES ("jQuery-Form")'),
 
 	for row in (conn.execute("SELECT * FROM library")):
 		print(row)
@@ -316,30 +314,31 @@ try:
 	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('2.29.3',1,4)"),
 	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('2.29.4',0,4)"),
 
-	#inserting data for library 5 - modernizer.js
-	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.1',0,5)"),
-	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.5',0,5)"),
-	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.6',0,5)"),
-	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('1.7',0,5)"),
-	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('2.0.4',0,5)"),
-	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('2.0.6',0,5)"),
-	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('2.5.1',0,5)"),
-	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('2.5.2',0,5)"),
-	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('2.5.3',0,5)"),
-	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('2.5b',0,5)"),
-	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('2.6.1',0,5)"),
-	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('2.6.2',0,5)"),
-	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('2.6.3',0,5)"),
-	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('2.7.0',0,5)"),
-	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('2.7.1',0,5)"),
-	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('2.7.2',0,5)"),
-	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('2.8.0',0,5)"),
-	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('2.8.1',0,5)"),
-	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('2.8.2',0,5)"),
-	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('2.8.3',0,5)"),
-	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('2010.07.06dev',0,5)"),
+	#inserting data for library 5- jquery-form
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('3.09',0,5)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('3.19',0,5)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('3.20',0,5)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('3.24',0,5)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('3.25.0-2013.01.18',0,5)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('3.32',0,5)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('3.32.0-2013.04.09',0,5)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('3.36',0,5)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('3.37.0',0,5)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('3.45',0,5)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('3.45.0',0,5)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('3.46',0,5)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('3.46.0',0,5)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('3.49',0,5)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('3.50',1,5)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('3.51',0,5)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('4.0.0',0,5)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('4.0.1',1,5)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('4.1.0',1,5)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('4.2.0',1,5)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('4.2.1',1,5)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('4.2.2',1,5)"),
+	conn.execute("INSERT INTO version(versionName, isVulnerable, libraryID) VALUES ('4.3.0',1,5)"),
 
-	
 	#inserting in table 3
 
 	#entering data for library 1- jqeury 
@@ -1558,83 +1557,100 @@ try:
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
 			VALUES('2.29.4/moment.min.js', '081737985335af4be15fc676ed4ccc0703c7446c6b5cbc9317e40bcdc6428e5d','C:\\MomentJS\\2.0.0\\minified\\moment.min-2.29.4.js',248)"),
 
-	#inserting data for library 5 -  modernizr
+	#inserting data for library 5 -  jqeuery-form
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-		VALUES('1.1/modernizr.js', '90443f160c60e3f0fe9588a1a0314958a37ef9d5512b1b50fe499710e6b894cf','C:\\ModernizrJS\\1.0.0\\uncompressed\\modernizr-1.1.js',249)"),
+			VALUES('3.09/jquery-form.js', 'a06f74a4aeb52c4c3c961aa0cbc4e44fac825940f812a10aa5a605759c53d887','C:\\JQueryForm\\3.0.0\\uncompressed\\jquery.form-3.09.js',249)"),
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-			VALUES('1.5/modernizr.js', '5be7794c6652d3d787d7285a1ea6fcbc812a925547289603359307971e97fe80','C:\\ModernizrJS\\1.0.0\\uncompressed\\modernizr-1.5.js',250)"),
+			VALUES('3.19/jquery-form.js', '013ffb7487bf6b1e2191c715ed1a54b64d6b5b3d565f9f8111ae69e896fc80f3','C:\\JQueryForm\\3.0.0\\uncompressed\\jquery.form-3.19.js',250)"),
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-			VALUES('1.6/modernizr.js', 'c07f89274ed8b86f7ea94b30f5b1037c6ffc1d8703eb1360ffae842486911f6e','C:\\ModernizrJS\\1.0.0\\uncompressed\\modernizr-1.6.js',251)"),
+			VALUES('3.2/jquery-form.js', 'aafaf14c98dc549f2b6a2058d1fd6277e27877f9f823a77350b48de71826846a','C:\\JQueryForm\\3.0.0\\uncompressed\\jquery.form-3.20.js',251)"),
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-			VALUES('2.5.1/modernizr.js', '53bdae286b1802cd3febe53d31ffd7ec4b7b21d14b8c89cc99003870472750f7','C:\\ModernizrJS\\2.0.0\\uncompressed\\modernizr-2.5.1.js',255)"),
+			VALUES('3.24/jquery-form.js', 'fc91ed80164f70bb7319584f61500156511995cbcf6c5e764fa88060e974b00f','C:\\JQueryForm\\3.0.0\\uncompressed\\jquery.form-3.24.js',252)"),
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-			VALUES('2.5.2/modernizr.js', '8b7849ab57ccfe2551c59bcd0e049d6466532b0c15f204e01d28cfbdb3aca63e','C:\\ModernizrJS\\2.0.0\\uncompressed\\modernizr-2.5.2.js',256)"),
+			VALUES('3.25.0-2013.01.18/jquery-form.js', '53219380d7339314d7facdfeb53555f9c690a41656467063946b6c20f5550888','C:\\JQueryForm\\3.0.0\\uncompressed\\jquery.form-3.25.0-2013.01.18.js',253)"),
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-			VALUES('2.5b/modernizr.js', 'b748631749d7348be0b4f083a35c3b2ea637c763de4bacb264b370685f8e9a86','C:\\ModernizrJS\\2.0.0\\uncompressed\\modernizr-2.5b.js',258)"),
+			VALUES('3.32/jquery-form.js', '14b30a934e36cdfc5301709bf515adc31e060bd7275eb056964cf7d2ed6e7550','C:\\JQueryForm\\3.0.0\\uncompressed\\jquery.form-3.32.js',254)"),
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-			VALUES('2.6.2/modernizr.js', 'bfdabf27e03a198331298a45ce15836e6d2bab8f4591d6aa6b28f0f39cecf44f','C:\\ModernizrJS\\2.0.0\\uncompressed\\modernizr-2.6.2.js',260)"),
+			VALUES('3.32.0-2013.04.09/jquery-form.js', '14b30a934e36cdfc5301709bf515adc31e060bd7275eb056964cf7d2ed6e7550','C:\\JQueryForm\\3.0.0\\uncompressed\\jquery.form-3.32.0-2013.04.09.js',255)"),
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-			VALUES('2.6.3/modernizr.js', 'a94568956a6d1725f702ab3d5e8e8c88622db86d022298ae5df6a34145317665','C:\\ModernizrJS\\2.0.0\\uncompressed\\modernizr-2.6.3.js',261)"),
+			VALUES('3.36/jquery-form.js', 'f31fb8a832b96fab5896faa1b1e5270cc370737c1af56edea653fcda008330be','C:\\JQueryForm\\3.0.0\\uncompressed\\jquery.form-3.36.js',256)"),
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-			VALUES('2.7.0/modernizr.js', 'a1e44e59fa9c8eb49b77cf97d30185e00e3edf572cb0d8135dfeb27a4004fc44','C:\\ModernizrJS\\2.0.0\\uncompressed\\modernizr-2.7.0.js',262)"),
+			VALUES('3.37.0/jquery-form.js', 'b6fbaae375b3f2b3d1ca885ba16f46f138e34ee75006b7d5bdc3200c119c1e85','C:\\JQueryForm\\3.0.0\\uncompressed\\jquery.form-3.37.0.js',257)"),
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-			VALUES('2.7.1/modernizr.js', '92b26797f59f3f3dc0f76996dd669a7b5dbf65948bef7da50f33a071e03eed1a','C:\\ModernizrJS\\2.0.0\\uncompressed\\modernizr-2.7.1.js',263)"),
+			VALUES('3.45/jquery-form.js', '7fd7786d23819dd4a18160c239b75d17d927d300725d239c193e5bdaa3f57529','C:\\JQueryForm\\3.0.0\\uncompressed\\jquery.form-3.45.js',258)"),
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-			VALUES('2.7.2/modernizr.js', '3db7fe4ba146a960fb68dbd7fc3bdd0222afd0e6c95b7410748e3579cfe52cbf','C:\\ModernizrJS\\2.0.0\\uncompressed\\modernizr-2.7.2.js',264)"),
+			VALUES('3.45.0/jquery-form.js', '7fd7786d23819dd4a18160c239b75d17d927d300725d239c193e5bdaa3f57529','C:\\JQueryForm\\3.0.0\\uncompressed\\jquery.form-3.45.0.js',259)"),
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-			VALUES('2.8.0/modernizr.js', '06cc230166e1a622bd5e52dd9529b5a4c6b8ef71ed7408a4a98a1c8eef1f4f90','C:\\ModernizrJS\\2.0.0\\uncompressed\\modernizr-2.8.0.js',265)"),
+			VALUES('3.46/jquery-form.js', 'df8e5c2d6e7d128aac3e8f007de210a172182d9b96690b3d6c0901f07d56862d','C:\\JQueryForm\\3.0.0\\uncompressed\\jquery.form-3.46.js',260)"),
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-			VALUES('2.8.1/modernizr.js', '202d390882a4be590cb3dea0d83ce917a518f442b18b427632e0e52c3f1e5cff','C:\\ModernizrJS\\2.0.0\\uncompressed\\modernizr-2.8.1.js',266)"),
+			VALUES('3.46.0/jquery-form.js', 'df8e5c2d6e7d128aac3e8f007de210a172182d9b96690b3d6c0901f07d56862d','C:\\JQueryForm\\3.0.0\\uncompressed\\jquery.form-3.46.0.js',261)"),
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-			VALUES('2.8.2/modernizr.js', 'b828b15e9b7836b493a8bd6e832a24ee13aa8b6f8b4a1bf307a7af2912014178','C:\\ModernizrJS\\2.0.0\\uncompressed\\modernizr-2.8.2.js',267)"),
+			VALUES('3.49/jquery-form.js', 'aa10e804a13e6c821e85635a8367417f35e3711367837b7120d2e80a2d7ad6be','C:\\JQueryForm\\3.0.0\\uncompressed\\jquery.form-3.49.js',262)"),
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-			VALUES('2.8.3/modernizr.js', '7dfc3ef73c1284c7aff3c5cdac3812d212c8b899037d7860c8ba20a1defb9a7f','C:\\ModernizrJS\\2.0.0\\uncompressed\\modernizr-2.8.3.js',268)"),
+			VALUES('3.5/jquery-form.js', '23fc25133ed072cdf7dae575213067b1da3c6843b2a0e489c8b7fc984c60ce6b','C:\\JQueryForm\\3.0.0\\uncompressed\\jquery.form-3.50.js',263)"),
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-			VALUES('2010.07.06dev/modernizr.js', 'e2e4c74560996897a808d8be69c0f9dac4f80787bb69217266f8d9a3f5d5cc08','C:\\ModernizrJS\\2.0.0\\uncompressed\\modernizr-2010.07.06dev.js',269)"),
+			VALUES('3.51/jquery-form.js', '3a16fd80d67008f1c947cf93ebb20e2af2ed1a6317e194d35ed15046076c4211','C:\\JQueryForm\\3.0.0\\uncompressed\\jquery.form-3.51.js',264)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('4.0.0/jquery-form.js', 'bd6532185b797f46ec1362bde35715640ae1bb2c786e75206abdfd5c411e8c5d','C:\\JQueryForm\\4.0.0\\uncompressed\\jquery.form-4.0.0.js',265)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('4.0.1/jquery-form.js', '21d54648524bde12a4c4bbe090b5d5d7e49d9b776da6c8526ac6835274de1e59','C:\\JQueryForm\\4.0.0\\uncompressed\\jquery.form-4.0.1.js',266)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('4.1.0/jquery-form.js', 'f8770ec0502318b26b275105e530cedecc47b6115dedc593fa89020554892829','C:\\JQueryForm\\4.0.0\\uncompressed\\jquery.form-4.1.0.js',267)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('4.2.0/jquery-form.js', 'f8b8c558888441903e268152e1b29be6419a3cef89b3515b5e8b78249d6da47a','C:\\JQueryForm\\4.0.0\\uncompressed\\jquery.form-4.2.0.js',268)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('4.2.1/jquery-form.js', '9eefc6910f97858e37e49ee226958f86118c8d358ac9427cf9050f4bc9db1ef5','C:\\JQueryForm\\4.0.0\\uncompressed\\jquery.form-4.2.1.js',269)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('4.2.2/jquery-form.js', '2dd743447ea250fa9ba77c7d0a53151a4544bd94eb21e9ab63ad77b2127f260c','C:\\JQueryForm\\4.0.0\\uncompressed\\jquery.form-4.2.2.js',270)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('4.3.0/jquery-form.js', '8e98c3b32ddbaaf2bc59655747927edf44b1d5694fef89e6b4d41cf66d6a052b','C:\\JQueryForm\\4.0.0\\uncompressed\\jquery.form-4.3.0.js',271)"),
 
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-			VALUES('1.1/modernizr.min.js', 'e9b22538dcfa9d3025de0c240d4cea525066fd3020ee450c3e14ab5e9c515721','C:\\ModernizrJS\\1.0.0\\uncompressed\\modernizr.min-1.1.js',249)"),
+			VALUES('3.09/jquery-form.min.js', 'b0a112ff50ed60c3d60ea7c785c6dd0581d5e328807d2d8fd3709a912617251f','C:\\JQueryForm\\3.0.0\\minified\\jquery.form.min-3.09.js',249)"),
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-			VALUES('1.5/modernizr.min.js', '4cebd4fcee6b4d3f1971fd5c693ab9ddec8590373117450bfd45e79c016818ca','C:\\ModernizrJS\\1.0.0\\uncompressed\\modernizr.min-1.5.js',250)"),
+			VALUES('3.19/jquery-form.min.js', 'f8fd3be3c4f9fb1d960f5560e7df827040f5646f16a55cafbd49e017812cd656','C:\\JQueryForm\\3.0.0\\minified\\jquery.form.min-3.19.js',250)"),
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-			VALUES('1.6/modernizr.min.js', 'ec76c6f2355a16cfae22f2613c398b1fd9bb9ff60f11ffe7808ae045ba985161','C:\\ModernizrJS\\1.0.0\\uncompressed\\modernizr.min-1.6.js',251)"),
+			VALUES('3.2/jquery-form.min.js', '2fbdf9325fe6581015a1e4c9af912853ee3c8c9472aab51e970aa84b4b32133b','C:\\JQueryForm\\3.0.0\\minified\\jquery.form.min-3.20.js',251)"),
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-			VALUES('1.7/modernizr.min.js', '954e385ecd6ed2ab0cb91dc0333ea1b3cf1bdcfe309d4857e7181324cb8dc25b','C:\\ModernizrJS\\1.0.0\\uncompressed\\modernizr.min-1.7.js',252)"),
+			VALUES('3.24/jquery-form.min.js', '65180a51c198afce431644e920f00025d11bedde572f89d4e7f33353c6f780fa','C:\\JQueryForm\\3.0.0\\minified\\jquery.form.min-3.24.js',252)"),
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-			VALUES('2.0.4/modernizr.min.js', 'c52845fe3b92ab779c549eeeed5cb324734f889f7f4f048b9e2818a0ac59766a','C:\\ModernizrJS\\2.0.0\\uncompressed\\modernizr.min-2.0.4.js',253)"),
+			VALUES('3.25.0-2013.01.18/jquery-form.min.js', 'd5cfc2eb7b7363b70fe53bc10c9bfc9787d857029a04f9a3e33f6ef17c8272d5','C:\\JQueryForm\\3.0.0\\minified\\jquery.form.min-3.25.0-2013.01.18.js',253)"),
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-			VALUES('2.0.6/modernizr.min.js', 'b5a828d11d179d277f1bb54871f1859dc04f888413cffc35f0e01b256774e38a','C:\\ModernizrJS\\2.0.0\\uncompressed\\modernizr.min-2.0.6.js',254)"),
+			VALUES('3.32/jquery-form.min.js', '35b137aac13ccdefc4116a827dffd01c0e919c1436c5b1d0f5ed9089859ae26c','C:\\JQueryForm\\3.0.0\\minified\\jquery.form.min-3.32.js',254)"),
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-			VALUES('2.5.1/modernizr.min.js', '8bd8e3300daca642b2888bdbf3446649fbeaeef09112b8722ec3d2eee0629176','C:\\ModernizrJS\\2.0.0\\uncompressed\\modernizr.min-2.5.1.js',255)"),
+			VALUES('3.32.0-2013.04.09/jquery-form.min.js', '872467797f6b0ea047c93740c416d5ef2b0cff0e311bcab59e16a8134314ca9d','C:\\JQueryForm\\3.0.0\\minified\\jquery.form.min-3.32.0-2013.04.09.js',255)"),
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-			VALUES('2.5.2/modernizr.min.js', '4888c41f85fb93450c64cb39898e324df2747bc9863a5fa6fda89c35d6b26f66','C:\\ModernizrJS\\2.0.0\\uncompressed\\modernizr.min-2.5.2.js',256)"),
+			VALUES('3.36/jquery-form.min.js', 'f5f95c61b223585df33610a2ff80014567a49c15e178005358bfc6d24ebe3fe5','C:\\JQueryForm\\3.0.0\\minified\\jquery.form.min-3.36.js',256)"),
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-			VALUES('2.5.3/modernizr.min.js', '4e24f38d6c765070b551b8b6a2c19521fc9cd8b8f262a805ceb7bb1ddbcf1803','C:\\ModernizrJS\\2.0.0\\uncompressed\\modernizr.min-2.5.3.js',257)"),
+			VALUES('3.37.0/jquery-form.min.js', '9401ce3d04ad93031bded3f72c3393de1a17d6467c072554adcdb3582b3f1a15','C:\\JQueryForm\\3.0.0\\minified\\jquery.form.min-3.37.0.js',257)"),
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-			VALUES('2.5b/modernizr.min.js', '432c114bc6d0075f0b9ff0cdad41e96534637e2f5c8f4eb0f76ffbff1c4d7e79','C:\\ModernizrJS\\2.0.0\\uncompressed\\modernizr.min-2.5b.js',258)"),
+			VALUES('3.45/jquery-form.min.js', '61566afd489d77661acbd5d25080286298fab5e8ff5062ac9e22ea7ce98b3dd5','C:\\JQueryForm\\3.0.0\\minified\\jquery.form.min-3.45.js',258)"),
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-			VALUES('2.6.1/modernizr.min.js', 'b07e42cede462d9b24fd642efe9e7bbff79342b34f3ca27e9b2aee3d78de00b5','C:\\ModernizrJS\\2.0.0\\uncompressed\\modernizr.min-2.6.1.js',259)"),
+			VALUES('3.45.0/jquery-form.min.js', '646e30a64a458c3a42735c165f526687eeae86ab4672df2130fe744fe6da7536','C:\\JQueryForm\\3.0.0\\minified\\jquery.form.min-3.45.0.js',259)"),
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-			VALUES('2.6.2/modernizr.min.js', 'cf25ec18f223f4c51ce1128a42e644cdc2244d88f89d1a51440d9dbe51f4efe8','C:\\ModernizrJS\\2.0.0\\uncompressed\\modernizr.min-2.6.2.js',260)"),
+			VALUES('3.46/jquery-form.min.js', 'f0bcc38b643ee12b6fa090b8acd514054dd57e3fe7166d7b9de89a022e5babab','C:\\JQueryForm\\3.0.0\\minified\\jquery.form.min-3.46.js',260)"),
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-			VALUES('2.6.3/modernizr.min.js', '7a51e3ceede0716ad2bc97b2fb24c2907836573102a103609a3932e2e3cbd342','C:\\ModernizrJS\\2.0.0\\uncompressed\\modernizr.min-2.6.3.js',261)"),
+			VALUES('3.46.0/jquery-form.min.js', 'ec30f86526c990f4ea46f13f9bb896584b386d95b94b664ce5587edb377dfc79','C:\\JQueryForm\\3.0.0\\minified\\jquery.form.min-3.46.0.js',261)"),
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-			VALUES('2.7.0/modernizr.min.js', '2492d13a77bc96730cdb52d04d6a9a3638d49828e341e67438bf5c8232fe93e2','C:\\ModernizrJS\\2.0.0\\uncompressed\\modernizr.min-2.7.0.js',262)"),
+			VALUES('3.49/jquery-form.min.js', 'a18954fd0927eda95e2726b701dc9a7e7d69adf046b30935477ceba13413d966','C:\\JQueryForm\\3.0.0\\minified\\jquery.form.min-3.49.js',262)"),
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-			VALUES('2.7.1/modernizr.min.js', '0b2a741489fb323cd96e2b546693ca1fc7151cfa0f2111eee4dd512e6b359941','C:\\ModernizrJS\\2.0.0\\uncompressed\\modernizr.min-2.7.1.js',263)"),
+			VALUES('3.5/jquery-form.min.js', '528c3df75bed6f06df9606b4e493939bf0cfa00480a682096164db5bec2401d7','C:\\JQueryForm\\3.0.0\\minified\\jquery.form.min-3.50.js',263)"),
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-			VALUES('2.7.2/modernizr.min.js', 'a5952ec9d44bb26c5bb76a8ab79ef13dd8e070acf9f4f2d3df788e741e313c19','C:\\ModernizrJS\\2.0.0\\uncompressed\\modernizr.min-2.7.2.js',264)"),
+			VALUES('3.51/jquery-form.min.js', '8e46813172e9fa6ada136f50d2bea0b539e249f3e14b537447b61c43076dee74','C:\\JQueryForm\\3.0.0\\minified\\jquery.form.min-3.51.js',264)"),
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-			VALUES('2.8.0/modernizr.min.js', '0bab4cc1d7464e61fcd39b47261fc2aa2fde57a4299252923a96349fab155003','C:\\ModernizrJS\\2.0.0\\uncompressed\\modernizr.min-2.8.0.js',265)"),
+			VALUES('4.0.0/jquery-form.min.js', '8d6eb14b86585e1a450eeb9d6b8cf4d133ba8dc92a3d5e803dde0aeb9750df82','C:\\JQueryForm\\4.0.0\\minified\\jquery.form.min-4.0.0.js',265)"),
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-			VALUES('2.8.1/modernizr.min.js', '6b60021c8116edd1018647ec36aa71e529a2cfaa244983c0ede07ba55ea61408','C:\\ModernizrJS\\2.0.0\\uncompressed\\modernizr.min-2.8.1.js',266)"),
+			VALUES('4.0.1/jquery-form.min.js', '6aed899911ea736ea2019b021a77abfbc55568c534450202db3b37458c141c63','C:\\JQueryForm\\4.0.0\\minified\\jquery.form.min-4.0.1.js',266)"),
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-			VALUES('2.8.2/modernizr.min.js', 'a6ac545a492e8298055b5665b7324fb6b6a0c4a55ef87dde42b0805a41ac3732','C:\\ModernizrJS\\2.0.0\\uncompressed\\modernizr.min-2.8.2.js',267)"),
+			VALUES('4.1.0/jquery-form.min.js', '6b8c5376101c62d7d4af8e65fe21c7ff7ba10e42d297707ba9c61202424f95e7','C:\\JQueryForm\\4.0.0\\minified\\jquery.form.min-4.1.0.js',267)"),
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-			VALUES('2.8.3/modernizr.min.js', 'd2b82e612d2a812e8be2a57300dab8923c4f2edbe7a799e7da70791b595646fe','C:\\ModernizrJS\\2.0.0\\uncompressed\\modernizr.min-2.8.3.js',268)"),
+			VALUES('4.2.0/jquery-form.min.js', '4d3e2f8110748e22f75f99069d7fab2e16a9eca6f86bf2c60a255e86fa3e7d64','C:\\JQueryForm\\4.0.0\\minified\\jquery.form.min-4.2.0.js',268)"),
 	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
-			VALUES('2010.07.06dev/modernizr.min.js', '700da43e56472c9025bd9ef3d3fa32558c5a675680a16e8a09c5cb819d601707','C:\\ModernizrJS\\2.0.0\\uncompressed\\modernizr.min-2010.07.06dev.js',269)"),
-
+			VALUES('4.2.1/jquery-form.min.js', 'f06fc176d714316c3773a8f99c1bd5b736a88f7b2afe45fac4d376150d30d0c6','C:\\JQueryForm\\4.0.0\\minified\\jquery.form.min-4.2.1.js',269)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('4.2.2/jquery-form.min.js', 'd8f8ebd4e96964c63aa9eb0933af2ddafdfdb7e94c2efc70a5af109518c9ae80','C:\\JQueryForm\\4.0.0\\minified\\jquery.form.min-4.2.2.js',270)"),
+	conn.execute("INSERT INTO variant (fileName, hashKey, content, versionID) \
+			VALUES('4.3.0/jquery-form.min.js', 'dd329c644951f3c041200e8279e3c90063ac5b5c8861fe253fca48df7dd8b99c','C:\\JQueryForm\\4.0.0\\minified\\jquery.form.min-4.3.0.js',271)"),
 
 	#inserting data in table 4 
 	#jquery data entry - lib 1
@@ -2137,45 +2153,56 @@ try:
 	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js',508)"),
 	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js',509)"),
 
-	#inserting data for library 5 -  modernizr
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/1.1/modernizr.js',510)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/1.5/modernizr.js',511)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/1.6/modernizr.js',512)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.5.1/modernizr.js',513)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.5.2/modernizr.js',514)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.5b/modernizr.js',515)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.js',516)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.3/modernizr.js',517)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.0/modernizr.js',518)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.js',519)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.2/modernizr.js',520)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.0/modernizr.js',521)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.1/modernizr.js',522)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js',523)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js',524)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/2010.07.06dev/modernizr.js',525)"),
+	#inserting data for library 5 -  jquery-form
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.09/jquery.form.js',510)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.19/jquery.form.js',511)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.20/jquery.form.js',512)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.24/jquery.form.js',513)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.25.0-2013.01.18/jquery.form.js',514)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js',515)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32.0-2013.04.09/jquery.form.js',516)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.36/jquery.form.js',517)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.37.0/jquery.form.js',518)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.45/jquery.form.js',519)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.45.0/jquery.form.js',520)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.46/jquery.form.js',521)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.46.0/jquery.form.js',522)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.49/jquery.form.js',523)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.50/jquery.form.js',524)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.js',525)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.0.0/jquery.form.js',526)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.0.1/jquery.form.js',527)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.1.0/jquery.form.js',528)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.0/jquery.form.js',529)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.1/jquery.form.js',530)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.js',531)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.js',532)"),
 
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/1.1/modernizr.min.js',526)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/1.5/modernizr.min.js',527)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/1.6/modernizr.min.js',528)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/1.7/modernizr-1.7.min.js',529)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.4/modernizr.min.js',530)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js',531)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.5.1/modernizr.min.js',532)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.5.2/modernizr.min.js',533)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.5.3/modernizr.min.js',534)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.5b/modernizr.min.js',535)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.1/modernizr.min.js',536)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js',537)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.3/modernizr.min.js',538)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.0/modernizr.min.js',539)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js',540)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.2/modernizr.min.js',541)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.0/modernizr.min.js',542)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.1/modernizr.min.js',543)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js',544)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js',545)"),
-	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/modernizr/2010.07.06dev/modernizr.min.js',546)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.09/jquery.form.min.js',533)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.19/jquery.form.min.js',534)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.20/jquery.form.min.js',535)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.24/jquery.form.min.js',536)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.25.0-2013.01.18/jquery.form.min.js',537)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.min.js',538)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32.0-2013.04.09/jquery.form.min.js',539)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.36/jquery.form.min.js',540)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.37.0/jquery.form.min.js',541)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.45/jquery.form.min.js',542)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.45.0/jquery.form.min.js',543)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.46/jquery.form.min.js',544)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.46.0/jquery.form.min.js',545)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.49/jquery.form.min.js',546)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.50jquery.form.min.js',547)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js',548)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.0.0/jquery.form.min.js',549)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.0.1/jquery.form.min.js',550)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.1.0/jquery.form.min.js',551)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.0/jquery.form.min.js',552)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.1/jquery.form.min.js',553)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js',554)"),
+	conn.execute("INSERT INTO url (url, variantID) VALUES ('https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js',555)"),
+
+
 
 
 	for row1 in (conn.execute("SELECT * FROM variant")):
