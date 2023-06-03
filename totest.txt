@@ -1,2 +1,0 @@
---gravatar.com | C:\Users\betha\Desktop\ITProject-Dissertation\WebScrapingProject\websites2\gravatar.com\https___s.gravatar.com_js_jquery.js_147
---stackoverflow.com | C:\Users\betha\Desktop\ITProject-Dissertation\WebScrapingProject\websites2\stackoverflow.com\https___ajax.googleapis.com_ajax_libs_jquery_1.12.4_jquery.min.js
